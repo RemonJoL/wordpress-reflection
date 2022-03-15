@@ -1,0 +1,17 @@
+//Utility
+@import "utility/colours";
+@import "utility/breakpoints";
+@import "utility/mixins";
+@import "utility/text";
+
+//Components partials
+@import "components/buttons";
+@import "components/images";
+@import "components/forms";
+
+
+//Main partials
+@import "main/main";
+@import "main/header";
+@import "main/footer";
+@import "main/sidebar";

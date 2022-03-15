@@ -1,0 +1,131 @@
+@import "utility/colours";
+@import "utility/breakpoints";
+
+a {
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.text-white {
+  color: white;
+}
+
+.h1, h1, .h2, h2, .h3, h3 {
+  text-align: center;
+}
+
+.h1, h1 {
+  font-size: 2rem;
+}
+
+// Header
+
+header a {
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  display: flex;
+
+  @include s {
+    font-size: 1.15rem;
+  }
+
+  @include lg {
+    font-size: 1.35rem;
+  }
+  @include xl {
+    font-size: 1.5rem;
+  }
+}
+
+header a:hover {
+  text-decoration: underline;
+  color: yellow;
+  transition: color 0.2s ease-in;
+}
+
+// Content
+
+.home-logo-container h1 {
+  margin: 1rem;
+  font-size: 1.5rem;
+  @include sm {
+    font-size: 2rem;
+  }
+}
+
+.pagination a {
+  color: white;
+}
+
+.pagination a:hover {
+  color: yellow;
+}
+
+.author-title {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.author {
+  display: block;
+  font-size: 2rem;
+  font-family: 'Petemoss', cursive;
+  margin-bottom: 1rem;
+}
+
+// Sidebar
+
+#primary-sidebar a {
+  color: white;
+}
+
+#primary-sidebar a:hover {
+  color: yellow;
+}
+
+#primary-sidebar h2 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.wp-block-latest-posts__list a {
+  color: $vtblue;
+}
+
+// Contact Form
+
+.form-section span {
+  display: flex;
+}
+
+// Footer
+
+footer a {
+  color: white;
+}
+
+footer p {
+  margin: 0.1rem;
+  @include md {
+    margin: 0.5rem;
+  }
+}
+
+
+footer p:nth-of-type(2) {
+  @media (max-width: 767px) and (min-width: $min576) {
+  margin: 0.1rem 1.2rem;
+  }
+}
+
+footer a:hover {
+  color: yellow;
+}

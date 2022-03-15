@@ -1,0 +1,256 @@
+@import "utility/colours";
+@import "utility/breakpoints";
+
+/*
+Theme Name: VTtheme
+Theme URI: /
+Author: Remon Jansen of Lorkeers
+Author URI: /
+Description: /
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags: /
+*/
+
+/*Main*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $vtblue;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  margin: 0;
+  //overflow: hidden;
+  height: 100vh;
+}
+
+.page-container {
+  overflow: auto;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+#page {
+  //overflow-x: hidden;
+  //overflow-y: auto;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  width: 90%;
+  @include s {
+    margin: 0 auto;
+    width: 85%;
+  }
+  @include md {
+    width: 75%;
+  }
+  @include xxl {
+    width: 1080px;
+  }
+}
+
+// Content
+
+#main {
+  width: 100%;
+  border: 3px solid yellow;
+  border-radius: 15px;
+  display: flex;
+  margin: 2rem auto;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px 1px #373737;
+}
+
+.content-area {
+  display: flex;
+  width: 100%;
+}
+
+.site-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include md {
+    width: 75%;
+  }
+}
+
+.post-title {
+  display: flex;
+  color: black;
+  margin: 1rem auto;
+  font-weight: 600;
+  font-size: 1.5rem;
+  @include s {
+    margin: 0rem auto 1rem;
+  }
+  @include sm {
+    margin: 1rem auto 2rem;
+    font-size: 2rem;
+  }
+}
+
+.post-container {
+  background: white;
+  border: 3px solid $border-lightgray;
+  border-radius: 15px;
+  box-shadow: inset 2px 2px 10px black;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  @include s {
+    padding: 30px;
+  }
+}
+
+.post-container:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-content {
+  display: flex;
+  margin: 3rem;
+}
+
+.search-error {
+  font-size: 2rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.home-logo-container {
+  display: flex;
+  flex-direction: column;
+  background-color: $vtblue;
+  border: 3px solid yellow;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 7px 1px #373737;
+  margin: 2rem auto 1rem;
+  color: yellow;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+}
+
+.nav-links {
+  background-color: $vtblue;
+  border: 3px solid yellow;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 7px 1px #373737;
+  margin: 2rem auto 1rem;
+  color: yellow;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+// Contact Form
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input[type=text]:focus,
+.form-container input[type=email]:focus,
+.form-container textarea:focus {
+  outline: 3px solid yellow;
+  outline-offset: -6px;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  background-color: $vtblue;
+  border: 3px solid yellow;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 7px 1px #373737;
+  margin: 2rem auto 1rem;
+  color: yellow;
+  text-transform: uppercase;
+}
+
+.form-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+}
+
+.form-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+  @include lg {
+    width: 50%;
+  }
+}
+
+.form-section:nth-child(3){
+  width: 100%;
+}
+
+.form-section:nth-child(4){
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.search-error-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.search-error-msg {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-categories {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.post-categories a {
+  color: yellow;
+}
+
+// Gallery
+
+.wp-block-gallery.has-nested-images {
+  background: $vtblue;
+  border: 3px solid yellow;
+  border-radius: 15px;
+  padding: 15px 15px 0;
+  box-shadow: 0px 0px 10px 1px #373737;
+}
+
+figcaption {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}

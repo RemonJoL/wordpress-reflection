@@ -1,0 +1,72 @@
+@import "utility/colours";
+@import "utility/breakpoints";
+
+// Header
+
+header img {
+  width: 100px;
+  margin: 16px auto 16px 16px;
+  @include lg {
+    width: 150px;
+  }
+}
+
+// Content
+
+.home-logo-container img {
+  width: 150px;
+  margin: 1rem 1rem 0;
+  @include sm {
+    width: 200px;
+  }
+}
+
+.post-logo {
+  margin: 1rem auto;
+  width: 100px;
+}
+
+.search-content img {
+  border: 3px solid yellow;
+  border-radius: 50%;
+  background: $vtblue;
+  margin: 1rem auto 1rem 1rem;
+  width: 25%;
+
+}
+
+.size-large {
+  display: flex;
+  margin: 0 0 2rem;
+  @include s {
+    margin: 0 1rem 2rem;
+  }
+  @include sm {
+    margin: 0 2rem 2rem;
+  }
+  @include lg {
+    margin: 0 4rem 2rem;
+  }
+}
+
+.search-error-container img {
+  width: 50%;
+  border-radius: 50%;
+  border: 3px solid yellow;
+  display: flex;
+  box-shadow: 0px 0px 10px 1px #373737;
+  background: #0d66c2;
+  margin: 2rem auto;
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image) {
+  border-radius: 3px;
+}
+
+// Sidebar
+
+.sidebar-logo {
+  width: 80%;
+  margin: 2rem auto;
+}
+

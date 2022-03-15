@@ -1,0 +1,72 @@
+@import "utility/colours";
+@import "utility/breakpoints";
+
+// Short height devices
+@mixin xsh {
+  @media (max-height: breakpoints.$maxh345) {
+    @content;
+  }
+}
+
+// Short height devices
+@mixin sh {
+  @media (max-height: breakpoints.$maxh480) {
+    @content;
+  }
+}
+
+// Medium height devices
+@mixin mh {
+  @media (max-height: breakpoints.$maxh767) {
+    @content;
+  }
+}
+
+// Extra small devices
+@mixin xs {
+  @media (min-width: $min375) {
+    @content;
+  }
+}
+
+// Smaller devices
+@mixin s {
+  @media (min-width: $min425) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm {
+  @media (min-width: $min576) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: $min768) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: $min992) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: $min1200) {
+    @content;
+  }
+}
+
+// Extra Extra large devices
+@mixin xxl {
+  @media (min-width: $min1440) {
+    @content;
+  }
+}

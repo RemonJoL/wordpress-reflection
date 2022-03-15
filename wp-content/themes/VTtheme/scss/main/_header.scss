@@ -1,0 +1,128 @@
+@import "utility/colours";
+@import "utility/breakpoints";
+
+header {
+  overflow: hidden;
+  height: 100px;
+  width: 100%;
+  border: 3px solid yellow;
+  border-radius: 15px;
+  background-color: $vtblue;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px 1px #373737;
+  flex-direction: column;
+  transition: height 0.3s ease-out;
+  z-index: 5;
+  @include md {
+    flex-direction: row;
+  }
+}
+
+hgroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-header-menu-container {
+  display: flex;
+}
+
+.header-nav {
+  display: none;
+  @include md {
+    display: flex;
+    margin-right: 1rem;
+  }
+  @include lg {
+    margin-right: 2rem;
+  }
+}
+
+.header-nav:nth-child(1) {
+  display: flex;
+
+  justify-content: center;
+  @include md{
+    display: none;
+  }
+}
+
+header ul {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
+
+header li {
+  text-decoration: none;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+header li:not(:first-child) {
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+
+.menu {
+  padding: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 0 0.5rem;
+  align-items: center;
+  display: flex;
+  @include s {
+    margin: 1rem 0;
+  }
+  @include md {
+    flex-wrap: nowrap;
+  }
+}
+
+.small-screen-sidebar {
+  display: block;
+  @include md {
+    display: none;
+  }
+}
+
+header .wp-block-search__label {
+  margin: 0;
+  font-size: 1rem;
+  @include s {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+  }
+}
+
+header .wp-block-search__button {
+  font-size: 1rem;
+  margin: 0.5rem 0 0;
+  @include s {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+  }
+}
+
+header button {
+  margin: 0.5rem 0;
+}
+
+.scroll-down {
+  top: -168px;
+  transition: height 0.3s ease-out, top 0.3s ease-out;
+
+  //@include bp(min768) {
+  //  top: -110px;
+  //}
+  //@include bp(min992) {
+  //  top: -209px;
+  //}
+}
+
+.scroll-up {
+  top: 0;
+  transition: height 0.3s ease-out, top 0.3s ease-out;
+}
